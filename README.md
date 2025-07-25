@@ -1,6 +1,6 @@
 # Create a freestyle job to run script.
 
-So we are using jenkins here and freestyle job is one of service of jenkins and freestyle job is used to configure scripts and used to build docker images and push those images to their respective repository management and also used to deploy those on the server
+So we are using jenkins here and freestyle job is a type of Jenkins project and freestyle job is used to configure scripts and used to build docker images and push those images to their respective repository management and also used to deploy those on the server
 
 In this repo we are going to see how to create a freestyle job and configure it and then build it. (the demo project we will be using it here is a java-maven-app)
 [link for the project](https://github.com/Hemanth42d/java-maven-app-learning-jenkins.git)
@@ -15,8 +15,7 @@ In this repo we are going to see how to create a freestyle job and configure it 
 >   > give it a name > choose freestyle job > save
 >   > click on configure in the sidebar of your job
 >   > select for Git and provide the url, branch, credentials via ui
->   > if you want you can build and test it via maven
->   > By selecting **Invoke as top level maven** in Build steps dropdown 
+>   > Optionally if you want you want to build and test it via maven then select **Invoke as top level maven** in Build steps dropdown 
 >   > In Build Steps click on **Execute as shell** and now we can run shell commands in it
 >   > ```bash
 >   > chmod +x ./freestyle.build.sh
@@ -29,7 +28,7 @@ The things to remember is you need to have docker access inside the conatiner an
 sudo apt update
 curl https://get.docker.com/ > dockerinstall && chmod +x dockerinstall && ./dockerinstall
 ls -l /var/run/docker.sock # the file permisions needs to be change
-chmod 666 /var/run/docker.sock
+chmod 666 /var/run/docker.sock # Allow Jenkins to access Docker
 
 # node installation
 curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
