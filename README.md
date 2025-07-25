@@ -1,8 +1,8 @@
-# Create a freestyle job to run script.
+# Create a freestyle Project to run script.
 
-So we are using jenkins here and freestyle job is a type of Jenkins project and freestyle job is used to configure scripts and used to build docker images and push those images to their respective repository management and also used to deploy those on the server
+So we are using jenkins here and freestyle Project is a type of Jenkins project and freestyle Project is used to configure scripts and used to build docker images and push those images to their respective repository management and also used to deploy those on the server
 
-In this repo we are going to see how to create a freestyle job and configure it and then build it. (the demo project we will be using it here is a java-maven-app)
+In this repo we are going to see how to create a freestyle Project and configure it and then build it. (the demo project we will be using it here is a java-maven-app)
 [link for the project](https://github.com/Hemanth42d/java-maven-app-learning-jenkins.git)
 
 1. The first and basic step is to install jenkins on the serve and can be done in two ways
@@ -12,8 +12,8 @@ In this repo we are going to see how to create a freestyle job and configure it 
 2. After installation configure the jenkins like username password and all those steps
 
 > create on + New item on the side bar of the jenkins dashboard
->   > give it a name > choose freestyle job > save
->   > click on configure in the sidebar of your job
+>   > give it a name > choose freestyle Project > save
+>   > click on configure in the sidebar of your freestyle Project
 >   > select for Git and provide the url, branch, credentials via ui
 >   > Optionally if you want you want to build and test it via maven then select **Invoke as top level maven** in Build steps dropdown 
 >   > In Build Steps click on **Execute as shell** and now we can run shell commands in it
@@ -21,7 +21,7 @@ In this repo we are going to see how to create a freestyle job and configure it 
 >   > chmod +x ./freestyle.build.sh
 >   > ./freestyle.build.sh
 >   > ```
->   > And then click on the save and after you will get into the page of your job and click on Build now in sidebar.
+>   > And then click on the save and after you will get into the page of your freestyle Project and click on Build now in sidebar.
 
 The things to remember is you need to have docker access inside the conatiner and node installed inside the conatiner and can be done via following command
 ```bash
